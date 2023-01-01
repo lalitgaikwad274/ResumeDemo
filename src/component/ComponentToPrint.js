@@ -12,9 +12,6 @@ export class ComponentToPrint extends React.PureComponent {
       return (
          <div className="resume" style={{ fontFamily: this.props.fontFamily }}>
             <div className="info">
-               {/* {this.props.photourl === "" ? null : (
-                  <img src={this.props.photourl} alt="" width="100" height="" />
-               )} */}
                <div className="main-info">
                   <h1
                      style={{
@@ -25,203 +22,120 @@ export class ComponentToPrint extends React.PureComponent {
                      {this.props.name}
                   </h1>
                   <h3>{this.props.subtitle}</h3>
-                  <p>{this.props.userdesc}</p>
+                  <p style={{ textIndent: 40, color: "gray" }}>
+                     {this.props.userdesc}
+                  </p>
                </div>
+               {this.props.email ||
+               this.props.contact ||
+               this.props.address ||
+               this.props.github ||
+               this.props.linkedin ||
+               this.props.portfolio ? (
+                  <div className="extrainfo">
+                     {this.props.email === "" ? null : (
+                        <a href={this.props.email}>
+                           <EmailIcon style={{ color: this.props.primary }} />{" "}
+                           {this.props.email}
+                        </a>
+                     )}
+                     {this.props.contact === "" ? null : (
+                        <a href={this.props.contact}>
+                           <PhoneIcon style={{ color: this.props.primary }} />{" "}
+                           {this.props.contact}
+                        </a>
+                     )}
+                     {this.props.address === "" ? null : (
+                        <a href={this.props.address}>
+                           <LocationOnIcon
+                              style={{ color: this.props.primary }}
+                           />
+                           {this.props.address}
+                        </a>
+                     )}
+                     {this.props.github === "" ? null : (
+                        <a href={this.props.github}>
+                           <GitHubIcon style={{ color: this.props.primary }} />
+                           {this.props.github}
+                        </a>
+                     )}
+                     {this.props.linkedin === "" ? null : (
+                        <a href={this.props.linkedin}>
+                           <LinkedInIcon
+                              style={{ color: this.props.primary }}
+                           />
+                           {this.props.linkedin}
+                        </a>
+                     )}
+                     {this.props.portfolio === "" ? null : (
+                        <a href={this.props.portfolio}>
+                           <LanguageIcon
+                              style={{ color: this.props.primary }}
+                           />
+                           {this.props.portfolio}
+                        </a>
+                     )}
+                  </div>
+               ) : null}
             </div>
-            {this.props.email ||
-            this.props.contact ||
-            this.props.address ||
-            this.props.github ||
-            this.props.linkedin ||
-            this.props.portfolio ? (
-               <div className="extrainfo">
-                  {this.props.email === "" ? null : (
-                     <a href={this.props.email}>
-                        {" "}
-                        <EmailIcon style={{ color: this.props.primary }} />{" "}
-                        {this.props.email}
-                     </a>
-                  )}
-                  {this.props.contact === "" ? null : (
-                     <a href={this.props.contact}>
-                        {" "}
-                        <PhoneIcon style={{ color: this.props.primary }} />{" "}
-                        {this.props.contact}
-                     </a>
-                  )}
-                  {this.props.address === "" ? null : (
-                     <a href={this.props.address}>
-                        {" "}
-                        <LocationOnIcon
-                           style={{ color: this.props.primary }}
-                        />{" "}
-                        {this.props.address}
-                     </a>
-                  )}
-                  {this.props.github === "" ? null : (
-                     <a href={this.props.github}>
-                        <GitHubIcon style={{ color: this.props.primary }} />
-                        {this.props.github}
-                     </a>
-                  )}
-                  {this.props.linkedin === "" ? null : (
-                     <a href={this.props.linkedin}>
-                        <LinkedInIcon style={{ color: this.props.primary }} />
-                        {this.props.linkedin}
-                     </a>
-                  )}
-                  {this.props.portfolio === "" ? null : (
-                     <a href={this.props.portfolio}>
-                        <LanguageIcon style={{ color: this.props.primary }} />
-                        {this.props.portfolio}
-                     </a>
-                  )}
-               </div>
-            ) : null}
 
             <div className="section">
                <div className="left-section">
-                  {this.props.exp3.postname === "" &&
-                  this.props.exp2.postname === "" &&
-                  this.props.exp.postname === "" &&
-                  this.props.exp4.postname === "" &&
-                  this.props.exp5.postname === "" &&
-                  this.props.exp6.postname === "" ? null : (
-                     <div className="experiences">
-                        <h2
-                           className="section-heading"
-                           style={{ color: this.props.primary }}
-                        >
-                           Experience
-                        </h2>
-                        {this.props.exp.postname === "" ? null : (
-                           <div className="div">
-                              <h2
-                                 style={{
-                                    fontSize: "1rem",
-                                    color: this.props.secondary,
-                                    textTransform: "capitalize",
-                                 }}
-                              >
-                                 {this.props.exp.postname}
-                              </h2>
-                              <h2
-                                 style={{ fontSize: "1rem", fontWeight: "400" }}
-                              >
-                                 {this.props.exp.company}
-                              </h2>
-                              <p
-                                 style={{
-                                    fontSize: "13px",
-                                    color: "gray",
-                                    fontWeight: "600",
-                                    marginLeft: "1rem",
-                                    fontStyle: "italic",
-                                 }}
-                                 className="fromto"
-                              >
-                                 {this.props.exp.from} - {this.props.exp.to}
-                              </p>
-                              <h5 style={{ fontWeight: "400" }}>Experience:</h5>
-                              <p style={{}}>- {this.props.exp.expdesc}</p>
-                           </div>
-                        )}
-                        {this.props.exp2.postname === "" ? null : (
-                           <div className="div">
-                              <h2
-                                 style={{
-                                    fontSize: "1rem",
-                                    color: this.props.secondary,
-                                 }}
-                              >
-                                 {this.props.exp2.postname}
-                              </h2>
-                              <h2
-                                 style={{ fontSize: "1rem", fontWeight: "400" }}
-                              >
-                                 {this.props.exp2.company}
-                              </h2>
-                              <p
-                                 style={{
-                                    fontSize: "13px",
-                                    color: "gray",
-                                    fontWeight: "600",
-                                    marginLeft: "1rem",
-                                    fontStyle: "italic",
-                                 }}
-                                 className="fromto"
-                              >
-                                 {this.props.exp2.from} - {this.props.exp2.to}
-                              </p>
-                              <h5 style={{ fontWeight: "400" }}>Experience:</h5>
-                              <p style={{}}>- {this.props.exp2.expdesc}</p>
-                           </div>
-                        )}
-                        {this.props.exp3.postname === "" ? null : (
-                           <div className="div">
-                              <h2
-                                 style={{
-                                    fontSize: "1rem",
-                                    color: this.props.secondary,
-                                 }}
-                              >
-                                 {this.props.exp3.postname}
-                              </h2>
-                              <h2
-                                 style={{ fontSize: "1rem", fontWeight: "400" }}
-                              >
-                                 {this.props.exp3.company}
-                              </h2>
-                              <p
-                                 style={{
-                                    fontSize: "13px",
-                                    color: "gray",
-                                    fontWeight: "600",
-                                    marginLeft: "1rem",
-                                    fontStyle: "italic",
-                                 }}
-                                 className="fromto"
-                              >
-                                 {this.props.exp3.from} - {this.props.exp3.to}
-                              </p>
-                              <h5 style={{ fontWeight: "400" }}>Experience:</h5>
-                              <p style={{}}>- {this.props.exp3.expdesc}</p>
-                           </div>
-                        )}
-                        {this.props.exp4.postname === "" ? null : (
-                           <div className="div">
-                              <h2
-                                 style={{
-                                    fontSize: "1rem",
-                                    color: this.props.secondary,
-                                 }}
-                              >
-                                 {this.props.exp4.postname}
-                              </h2>
-                              <h2
-                                 style={{ fontSize: "1rem", fontWeight: "400" }}
-                              >
-                                 {this.props.exp4.company}
-                              </h2>
-                              <p
-                                 style={{
-                                    fontSize: "13px",
-                                    color: "gray",
-                                    fontWeight: "600",
-                                    marginLeft: "1rem",
-                                    fontStyle: "italic",
-                                 }}
-                                 className="fromto"
-                              >
-                                 {this.props.exp4.from} - {this.props.exp4.to}
-                              </p>
-                              <h5 style={{ fontWeight: "400" }}>Experience:</h5>
-                              <p style={{}}>- {this.props.exp4.expdesc}</p>
-                           </div>
-                        )}
-                     </div>
+                  {this.props.exp[0].postname && (
+                     <h2
+                        className="section-heading"
+                        style={{ color: this.props.primary }}
+                     >
+                        Experience
+                     </h2>
                   )}
-
+                  {this.props.exp.map((item) =>
+                     item.postname === "" ? null : (
+                        <div className="experiences">
+                           {item.postname === "" ? null : (
+                              <div className="div">
+                                 <h2
+                                    style={{
+                                       fontSize: "1rem",
+                                       color: this.props.secondary,
+                                       textTransform: "capitalize",
+                                    }}
+                                 >
+                                    {item.postname}
+                                 </h2>
+                                 <h2
+                                    style={{
+                                       fontSize: "1rem",
+                                       fontWeight: "400",
+                                    }}
+                                 >
+                                    {item.company}
+                                 </h2>
+                                 {item.from && (
+                                    <p
+                                       style={{
+                                          fontSize: "13px",
+                                          color: "gray",
+                                          fontWeight: "600",
+                                          marginLeft: "1rem",
+                                          fontStyle: "italic",
+                                       }}
+                                       className="fromto"
+                                    >
+                                       {item.from} - {item.to}
+                                    </p>
+                                 )}
+                                 <p style={{}}>{item.expdesc}</p>
+                                 {/* <ul>
+                                    {item.expdesc.map((ele, index) => (
+                                       <li key={index}>{ele}</li>
+                                    ))}
+                                 </ul> */}
+                              </div>
+                           )}
+                        </div>
+                     )
+                  )}
                   {Object.keys(this.props.edu).reduce((flag, education) => {
                      if (
                         this.props.edu[education].school !== undefined &&
@@ -279,7 +193,7 @@ export class ComponentToPrint extends React.PureComponent {
                                     {this.props.edu[education].to}
                                  </p>
                                  <h5 style={{ fontWeight: "400" }}>
-                                    Achievements:
+                                    Percentage / CGPA:
                                  </h5>
                                  <p style={{}}>
                                     - {this.props.edu[education].ach}

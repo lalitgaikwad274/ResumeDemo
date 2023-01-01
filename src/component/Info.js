@@ -80,7 +80,7 @@ function Info({
                      onChange={(e) => setcontact(e.target.value)}
                   />
                </div>
-               <div className="input-box">
+               {/* <div className="input-box">
                   <span className="details">Address</span>
                   <input
                      type="text"
@@ -88,7 +88,7 @@ function Info({
                      value={address}
                      onChange={(e) => setaddress(e.target.value)}
                   />
-               </div>
+               </div> */}
                <div className="input-box">
                   <span className="details">Github</span>
                   <input
@@ -107,7 +107,7 @@ function Info({
                      onChange={(e) => setlinkedin(e.target.value)}
                   />
                </div>
-               <div className="input-box">
+               {/* <div className="input-box">
                   <span className="details">Portfolio</span>
                   <input
                      type="text"
@@ -115,7 +115,7 @@ function Info({
                      value={portfolio}
                      onChange={(e) => setportfolio(e.target.value)}
                   />
-               </div>
+               </div> */}
             </div>
          </div>
       </div>
