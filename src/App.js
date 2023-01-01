@@ -1,9 +1,8 @@
 import "./App.css";
-import Homepage from "./component/Homepage";
 import MyNavbar from "./component/NavBar/MyNavbar";
 import Footer from "./component/Footer/Footer";
 import Home from "./component/pages/Home";
-import CustomNavabar from "./component/NavBar/CustomNavbar";
+// import CustomNavabar from "./component/NavBar/CustomNavbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./component/pages/About";
 import Contact from "./component/pages/Contact";

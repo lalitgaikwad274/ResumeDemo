@@ -35,6 +35,23 @@ const Footer = () => {
                         You could easily find us on social media !!! See you
                         there...
                      </p>
+                     <div className="social-icons">
+                        <img
+                           src={require("./../../Assets/images/instagram.png")}
+                           style={{ height: 30, marginRight: 10 }}
+                           alt=""
+                        />
+                        <img
+                           src={require("./../../Assets/images/linkedin.png")}
+                           style={{ height: 30, marginRight: 10 }}
+                           alt=""
+                        />
+                        <img
+                           src={require("./../../Assets/images/facebook.png")}
+                           style={{ height: 30 }}
+                           alt=""
+                        />
+                     </div>
                   </div>
                   <div class="widget">
                      <ul class="list-unstyled social">
