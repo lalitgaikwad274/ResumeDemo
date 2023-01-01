@@ -35,7 +35,7 @@ function Edu({ number, edu, setedu, school, course, from, to, ach, id }) {
             <div className="input-box">
                <span className="details">From</span>
                <input
-                  type="text"
+                  type="date"
                   placeholder="Your Subtitle"
                   style={{ width: "50%", marginLeft: "1.3rem" }}
                   value={from}
@@ -48,7 +48,7 @@ function Edu({ number, edu, setedu, school, course, from, to, ach, id }) {
                   To
                </span>
                <input
-                  type="text"
+                  type="date"
                   placeholder="Your Subtitle"
                   style={{ width: "50%", marginLeft: "0" }}
                   value={to}
@@ -56,10 +56,10 @@ function Edu({ number, edu, setedu, school, course, from, to, ach, id }) {
                />
             </div>
             <div className="input-box">
-               <span className="details">Achievements</span>
+               <span className="details">Percentage / CGPA</span>
                <input
                   type="text"
-                  placeholder="Achievements"
+                  placeholder="percentage / CGPA"
                   value={ach}
                   onChange={(e) => updateData(id, "ach", e.target.value)}
                />

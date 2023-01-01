@@ -37,7 +37,6 @@ function Homepage() {
    // font
 
    //info hooks
-   //  const [photourl, setphotourl] = useState("");
    const [name, setname] = useState("");
    const [subtitle, setsubtitle] = useState("");
    const [userdesc, setuserdesc] = useState("");
@@ -50,64 +49,17 @@ function Homepage() {
    const [portfolio, setportfolio] = useState("");
    //Experiecne Hooks
    //experience 1
-   const setPhoto = (e) => {
-      const file = e.target.files[0];
-      const fileReader = new FileReader();
 
-      // fileReader.addEventListener("load", (result) => {
-      //    setphotourl(fileReader.result);
-      // });
-
-      fileReader.readAsDataURL(file);
-   };
-
-   const [exp, setexp] = useState({
-      postname: "",
-      company: "",
-      from: "",
-      to: "",
-      expdesc: "",
-   });
-   //experience 2
-   const [exp2, setexp2] = useState({
-      postname: "",
-      company: "",
-      from: "",
-      to: "",
-      expdesc: "",
-   });
-   //experience 3
-   const [exp3, setexp3] = useState({
-      postname: "",
-      company: "",
-      from: "",
-      to: "",
-      expdesc: "",
-   });
-   //experience 4
-   const [exp4, setexp4] = useState({
-      postname: "",
-      company: "",
-      from: "",
-      to: "",
-      expdesc: "",
-   });
-   //experience 5
-   const [exp5, setexp5] = useState({
-      postname: "",
-      company: "",
-      from: "",
-      to: "",
-      expdesc: "",
-   });
-   //experience 6
-   const [exp6, setexp6] = useState({
-      postname: "",
-      company: "",
-      from: "",
-      to: "",
-      expdesc: "",
-   });
+   const [exp, setexp] = useState([
+      {
+         id: 1,
+         postname: "",
+         company: "",
+         from: "",
+         to: "",
+         expdesc: [""],
+      },
+   ]);
    //Eduaction Hooks
    const [edu, setedu] = useState({
       //default education 1
@@ -217,21 +169,22 @@ function Homepage() {
       ) {
          return false;
       }
-      const dummyExp = {
-         postname: "",
-         company: "",
-         from: "",
-         to: "",
-         expdesc: "",
-      };
+      // const dummyExp = {
+      //    id: 1,
+      //    postname: "",
+      //    company: "",
+      //    from: "",
+      //    to: "",
+      //    expdesc: "",
+      // };
 
-      let expArray = [exp, exp2, exp3, exp4, exp5, exp6];
+      // let expArray = [exp];
 
-      for (let i = 0; i < 6; ++i) {
-         if (JSON.stringify(expArray[i]) !== JSON.stringify(dummyExp)) {
-            return false;
-         }
-      }
+      // for (let i = 0; i < 6; ++i) {
+      //    if (JSON.stringify(expArray[i]) !== JSON.stringify(dummyExp)) {
+      //       return false;
+      //    }
+      // }
 
       const dummyProject = {
          name: "",
@@ -324,11 +277,7 @@ function Homepage() {
             ? ""
             : localStorage.getItem("subtitle")
       );
-      // setphotourl(
-      //    localStorage.getItem("photourl") == null
-      //       ? ""
-      //       : localStorage.getItem("photourl")
-      // );
+
       setuserdesc(
          localStorage.getItem("userdesc") == null
             ? ""
@@ -398,33 +347,9 @@ function Homepage() {
       setexp(
          localStorage.getItem("exp") == null
             ? exp
-            : JSON.parse(localStorage.getItem("exp"))[0]
+            : JSON.parse(localStorage.getItem("exp"))
       );
-      setexp2(
-         localStorage.getItem("exp") == null
-            ? exp2
-            : JSON.parse(localStorage.getItem("exp"))[1]
-      );
-      setexp3(
-         localStorage.getItem("exp") == null
-            ? exp3
-            : JSON.parse(localStorage.getItem("exp"))[2]
-      );
-      setexp4(
-         localStorage.getItem("exp") == null
-            ? exp4
-            : JSON.parse(localStorage.getItem("exp"))[3]
-      );
-      setexp5(
-         localStorage.getItem("exp") == null
-            ? exp5
-            : JSON.parse(localStorage.getItem("exp"))[4]
-      );
-      setexp6(
-         localStorage.getItem("exp") == null
-            ? exp6
-            : JSON.parse(localStorage.getItem("exp"))[5]
-      );
+
       setthemes(
          localStorage.getItem("themes") == null
             ? themeList
@@ -447,7 +372,6 @@ function Homepage() {
       );
    }, []);
    useEffect(() => {
-      // localStorage.setItem("photourl", photourl);
       localStorage.setItem("name", name);
       localStorage.setItem("subtitle", subtitle);
       localStorage.setItem("userdesc", userdesc);
@@ -464,10 +388,7 @@ function Homepage() {
          "project",
          JSON.stringify([project, project2, project3])
       );
-      localStorage.setItem(
-         "exp",
-         JSON.stringify([exp, exp2, exp3, exp4, exp5, exp6])
-      );
+      localStorage.setItem("exp", JSON.stringify(exp));
       localStorage.setItem("themes", JSON.stringify(themes));
       localStorage.setItem("theme_primary", primary);
       localStorage.setItem("theme_secondary", secondary);
@@ -475,7 +396,6 @@ function Homepage() {
    }, [
       name,
       subtitle,
-      // photourl,
       userdesc,
       email,
       contact,
@@ -491,11 +411,6 @@ function Homepage() {
       project2,
       project3,
       exp,
-      exp2,
-      exp3,
-      exp4,
-      exp5,
-      exp6,
       themes,
       primary,
       secondary,
@@ -575,41 +490,6 @@ function Homepage() {
                      from={exp.from}
                      to={exp.to}
                      expdesc={exp.expdesc}
-                     exp2={exp2}
-                     setexp2={setexp2}
-                     postname2={exp2.postname}
-                     company2={exp2.company}
-                     from2={exp2.from}
-                     to2={exp2.to}
-                     expdesc2={exp2.expdesc}
-                     exp3={exp3}
-                     setexp3={setexp3}
-                     postname3={exp3.postname}
-                     company3={exp3.company}
-                     from3={exp3.from}
-                     to3={exp3.to}
-                     expdesc3={exp3.expdesc}
-                     exp4={exp4}
-                     setexp4={setexp4}
-                     postname4={exp4.postname}
-                     company4={exp4.company}
-                     from4={exp4.from}
-                     to4={exp4.to}
-                     expdesc4={exp4.expdesc}
-                     exp5={exp5}
-                     setexp5={setexp5}
-                     postname5={exp5.postname}
-                     company5={exp5.company}
-                     from5={exp5.from}
-                     to5={exp5.to}
-                     expdesc5={exp5.expdesc}
-                     exp6={exp6}
-                     setexp6={setexp6}
-                     postname6={exp6.postname}
-                     company6={exp6.company}
-                     from6={exp6.from}
-                     to6={exp6.to}
-                     expdesc6={exp6.expdesc}
                   />
                ) : null}
                {nav === "Education" ? (
@@ -809,11 +689,6 @@ function Homepage() {
                      linkedin={linkedin}
                      portfolio={portfolio}
                      exp={exp}
-                     exp2={exp2}
-                     exp3={exp3}
-                     exp4={exp4}
-                     exp5={exp5}
-                     exp6={exp6}
                      edu={edu}
                      skills={skills}
                      achlist={list}
