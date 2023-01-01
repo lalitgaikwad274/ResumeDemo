@@ -60,39 +60,57 @@ const Home = () => {
             </div>
             <div className="row align-items-stretch">
                <div className="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
-                  <div className="feature-1 d-md-flex">
-                     <div className="align-self-center">
+                  <div className="feature-1 d-md-flex flex-column">
+                     <div className="text-center">
+                        <img
+                           src={require("./../../Assets/images/copy-writing.png")}
+                           style={{ height: 50, alignSelf: "center" }}
+                           alt=""
+                        />
                         <span className="flaticon-house display-4 text-primary" />
+
                         <h3>Resume Writing</h3>
-                        <p className="mb-0">
-                           Hire a resume writer and get you resume created in
-                           pdf/word format.
-                        </p>
                      </div>
+
+                     <p className="mb-0">
+                        Hire a resume writer and get you resume created in
+                        pdf/word format.
+                     </p>
                   </div>
                </div>
                <div className="col-lg-4 order-lg-1">
-                  <div className="feature-1 d-md-flex">
-                     <div className="align-self-center">
+                  <div className="feature-1 d-md-flex flex-column">
+                     <div className="text-center">
                         <span className="flaticon-mail display-4 text-primary" />
+                        <img
+                           src={require("./../../Assets/images/management.png")}
+                           style={{ height: 50 }}
+                           alt=""
+                        />
                         <h3>Placement Management System</h3>
-                        <p className="mb-0">
-                           Create unlimited resumes and manage the data in one
-                           software, easy to access, easy to use.
-                        </p>
                      </div>
+                     <p className="mb-0">
+                        Create unlimited resumes and manage the data in one
+                        software, easy to access, easy to use.
+                     </p>
                   </div>
                </div>
                <div className="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
-                  <div className="feature-1 d-md-flex">
-                     <div className="align-self-center">
+                  <div className="feature-1 d-md-flex flex-column">
+                     <div className="text-center">
                         <span className="flaticon-mail display-4 text-primary" />
+                        <img
+                           src={require("./../../Assets/images/copy-writing.png")}
+                           style={{ height: 50 }}
+                           alt=""
+                        />
                         <h3>Resume Building</h3>
-                        <p className="mb-0">
-                           Get resume builder software to create and download
-                           unlimited resumes at affoardable price.{" "}
-                        </p>
                      </div>
+
+                     <p className="mb-0">
+                        Get resume builder software to create and download
+                        unlimited resumes at affoardable price.{" "}
+                     </p>
                   </div>
                </div>
             </div>

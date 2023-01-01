@@ -809,7 +809,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   position: relative;
   border-radius: 20px;
   -webkit-box-shadow: 0 25px 50px -10px rgba(26, 55, 77, 0.4);
-  box-shadow: 0px 100px 400px 50px rgba(26, 55, 77, 0.4);
+  box-shadow: 0px 50px 100px 10px rgba(26, 55, 77, 0.4);
   height: 400px;
   margin-bottom: -100px;
 }
@@ -1116,13 +1116,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 .feature-1 {
-  padding: 45px;
-  height: 300px;
+  padding: 30px;
+  height: 250px;
   background: #a4c0e6;
   border-radius: 15px;
   min-height: calc(50% - 15px);
   top: 0;
   margin-bottom: 30px !important;
+}
+
+.feature-1 p {
+  text-indent: 30px;
 }
 
 @media (max-width: 991.98px) {
