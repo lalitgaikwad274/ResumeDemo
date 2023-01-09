@@ -25,9 +25,9 @@ function Info({
 }) {
    return (
       <div>
-         <div className="form">
+         <div className="formSection">
             <h1 className="heading">Information</h1>
-            <div className="form">
+            <div className="formSection">
                {/* <div className="input-box">
                                 <span className="details">Photo</span>
                                 <input type="file" onChange={setphotourl} title=" " style={{color:'transparent'}}className="custom-file-input" />
@@ -61,7 +61,7 @@ function Info({
                </div>
             </div>
             <h1 className="heading">Extra Information</h1>
-            <div className="form">
+            <div className="formSection">
                <div className="input-box">
                   <span className="details">Email</span>
                   <input

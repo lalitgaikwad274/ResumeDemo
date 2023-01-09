@@ -25,7 +25,7 @@ const WorkExp = ({
 
    return (
       <>
-         <div className="form experience">
+         <div className="formSection experience">
             <h2>Experience #{number} </h2>
             <div className="input-box">
                <span className="details">Post Title</span>
@@ -82,16 +82,17 @@ const WorkExp = ({
                            placeholder="Write your Experience Here"
                            value={expdesc[index]}
                            onChange={(e) => {
-                              const pointdata = expdesc.map((ele, ind) => {
-                                 // console.log(ind, " ", e.target.value);
-                                 return index === ind ? e.target.value : ele;
-                              });
+                              console.log("object",expdesc);
+                              const pointdata = [expdesc, expdesc[index] = e.target.value]
+                              //  expdesc.map((ele, ind) => {
+                              //    console.log(ind, " ",e.target.value);
+                              //    return index === ind ? e.target.value : ele;
+                              // });
+                              // console.log(pointdata);
                               setData({
                                  ...data,
-                                 expdesc: [
-                                    ...expdesc,
-                                    (expdesc[index] = e.target.value),
-                                 ],
+                                 expdesc: pointdata
+                                 
                               });
                            }}
                         />
@@ -129,7 +130,7 @@ function Experience({ setexp, postname, company, from, to, expdesc }) {
    };
 
    return (
-      <div className="form workexp">
+      <div className="formSection workexp">
          <h1 className="heading">Work Experience</h1>
          {data.length > 0 &&
             data.map((item, index) => (

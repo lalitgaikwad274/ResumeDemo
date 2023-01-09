@@ -3,7 +3,7 @@ import React from "react";
 function Project({ number, project, setproject, name, link, tech, desc }) {
    console.log("object");
    return (
-      <div className="form experience">
+      <div className="formSection experience">
          <h2>Project #{number} </h2>
          <div className="input-box">
             <span className="details">Name</span>
@@ -73,7 +73,7 @@ function Projects({
    desc3,
 }) {
    return (
-      <div className="form">
+      <div className="formSection">
          <Project
             number={1}
             project={project}

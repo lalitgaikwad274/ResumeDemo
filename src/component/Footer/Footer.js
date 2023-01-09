@@ -36,21 +36,25 @@ const Footer = () => {
                         there...
                      </p>
                      <div className="social-icons">
-                        <img
+                        <a href="https://instagram.com/mechions_?igshid=NTdlMDg3MTY=">
+                           <img
                            src={require("./../../Assets/images/instagram.png")}
                            style={{ height: 30, marginRight: 10 }}
                            alt=""
-                        />
+                        /></a>
+                        <a href="https://www.linkedin.com/in/mechions-team-016131260"> 
                         <img
                            src={require("./../../Assets/images/linkedin.png")}
                            style={{ height: 30, marginRight: 10 }}
                            alt=""
-                        />
+                        /></a>
+                       <a href="https://www.youtube.com/@stabilizer1122">
                         <img
-                           src={require("./../../Assets/images/facebook.png")}
+                           src={require("./../../Assets/images/youtube.png")}
                            style={{ height: 30 }}
                            alt=""
-                        />
+                        /></a>
+                        
                      </div>
                   </div>
                   <div class="widget">

@@ -116,17 +116,17 @@
 
 }
 
-#main .maincomponent .left .form {
+#main .maincomponent .left .formSection {
     color: white;
 }
 
-.form {
+.formSection {
     display: flex;
     flex-direction: column;
     padding: 1rem;
 }
 
-.form .heading {
+.formSection .heading {
     float: left;
     font-size: 30px;
     font-weight: 300;
@@ -134,7 +134,7 @@
     position: relative;
 }
 
-.form .heading::after {
+.formSection .heading::after {
     content: "";
     position: absolute;
     width: 10%;
@@ -144,17 +144,17 @@
     top: 100%;
 }
 
-.form .input-box {
+.formSection .input-box {
     display: flex;
     margin: 6px 0;
     align-items: center;
 }
 
-.form .input-box span {
+.formSection .input-box span {
     width: 30%;
 }
 
-.form .input-box textarea {
+.formSection .input-box textarea {
     background: none;
     border: none;
     width: 100%;
@@ -169,16 +169,16 @@
     font-weight: 300;
 }
 
-.form .textarea {
+.formSection .textarea {
     align-items: normal;
     margin-top: 10px;
 }
 
-.form .textarea span {
+.formSection .textarea span {
     margin-top: 1rem;
 }
 
-.form .input-box input {
+.formSection .input-box input {
     background: none;
     border: none;
     width: 100%;
@@ -242,7 +242,7 @@
     border: 1px solid #58a6ff;
 }
 
-.form>h2 {
+.formSection>h2 {
     float: left;
     font-size: 25px;
     font-weight: 300;
@@ -250,7 +250,7 @@
     position: relative;
 }
 
-.form>h2::before {
+.formSection>h2::before {
     content: "";
     position: absolute;
     width: 10%;
@@ -281,7 +281,7 @@
     justify-content: inherit;
 }
 
-.form .achivelist {
+.formSection .achivelist {
     padding: .5rem;
     border-radius: 5px;
     border: 1px solid #58a6ff;
@@ -294,13 +294,13 @@
     align-items: center;
 }
 
-.form .achivelist p {
+.formSection .achivelist p {
     flex: 0.97;
     word-wrap: break-word;
     overflow: hidden;
 }
 
-.form .achivelist .MuiSvgIcon-root {
+.formSection .achivelist .MuiSvgIcon-root {
     float: right;
     cursor: pointer;
 }

@@ -12,9 +12,9 @@ function Skills({
    setskills,
 }) {
    return (
-      <div className="form">
+      <div className="formSection">
          <h1 className="heading">Skills</h1>
-         <div className="form">
+         <div className="formSection">
             <div className="input-box">
                <span className="details">Skills</span>
                <input

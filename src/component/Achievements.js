@@ -16,9 +16,9 @@ const Ach = (props) => {
 };
 function Achievements({ ach, setach, list, setlist, additem, deleteitem }) {
    return (
-      <div className="form">
+      <div className="formSection">
          <h1 className="heading">Achievements</h1>
-         <div className="form">
+         <div className="formSection">
             <div className="input-box">
                <span className="details">Achievements</span>
                <input

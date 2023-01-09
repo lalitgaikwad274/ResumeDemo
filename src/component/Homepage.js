@@ -14,7 +14,6 @@ import CardContent from "@material-ui/core/CardContent";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import { ColorPicker } from "material-ui-color";
-import { InputLabel } from "@material-ui/core";
 
 //Homepage
 function Homepage() {

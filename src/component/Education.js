@@ -12,7 +12,7 @@ function Edu({ number, edu, setedu, school, course, from, to, ach, id }) {
    };
    return (
       <>
-         <div className="form experience">
+         <div className="formSection experience">
             <h2>Education #{number} </h2>
             <div className="input-box">
                <span className="details">School</span>
@@ -84,7 +84,7 @@ function Education({ edu, setedu }) {
       setIndex((index) => index + 1);
    };
    return (
-      <div className="form education">
+      <div className="formSection education">
          <h1 className="heading">Education</h1>
          {Object.keys(edu).map((eduid, index) => {
             return (

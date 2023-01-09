@@ -8,13 +8,14 @@ import About from "./component/pages/About";
 import Contact from "./component/pages/Contact";
 import Login from "./component/pages/Login";
 import ResumeBuilding from "./component/pages/ResumeBuilding";
+import Homepage from "./component/Homepage";
 const NotFound = () => <div>Not found</div>;
 
 function App() {
    return (
       <>
-         <BrowserRouter>
-            <div>
+         {/* <BrowserRouter>
+            <div style={{position:'relative'}}>
                <MyNavbar />
                <Routes>
                   <Route exact path="/" element={<Home />} />
@@ -24,14 +25,17 @@ function App() {
                   <Route path="/resumebuilding" element={<ResumeBuilding />} />
                   <Route component={NotFound} />
                </Routes>
+               {/* <div className="msg">
+                  <img  src={require("./Assets/images/comment.png")}/>
+               </div> 
                <Footer />
             </div>
-         </BrowserRouter>
+         </BrowserRouter> */}
          {/* <MyNavbar /> */}
          {/* <Home /> */}
          {/* <Footer /> */}
          {/* <CustomNavabar /> */}
-         {/* <Homepage /> */}
+         <Homepage />
       </>
    );
 }

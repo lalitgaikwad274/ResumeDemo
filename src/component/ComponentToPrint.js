@@ -125,12 +125,12 @@ export class ComponentToPrint extends React.PureComponent {
                                        {item.from} - {item.to}
                                     </p>
                                  )}
-                                 <p style={{}}>{item.expdesc}</p>
-                                 {/* <ul>
-                                    {item.expdesc.map((ele, index) => (
-                                       <li key={index}>{ele}</li>
+                                 {/* <p style={{}}>{item.expdesc}</p> */}
+                                 <ul>
+                                    {item.expdesc.map((ele) => (
+                                       <li >{ele}</li>
                                     ))}
-                                 </ul> */}
+                                 </ul>
                               </div>
                            )}
                         </div>
