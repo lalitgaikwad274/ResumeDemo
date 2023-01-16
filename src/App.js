@@ -14,28 +14,26 @@ const NotFound = () => <div>Not found</div>;
 function App() {
    return (
       <>
-         {/* <BrowserRouter>
+         <BrowserRouter>
             <div style={{position:'relative'}}>
                <MyNavbar />
                <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
-                  <Route path="/login" element={<Login />} />
+                  <Route path="#" element={<Login />} />
                   <Route path="/resumebuilding" element={<ResumeBuilding />} />
                   <Route component={NotFound} />
                </Routes>
                {/* <div className="msg">
                   <img  src={require("./Assets/images/comment.png")}/>
-               </div> 
+               </div> */}
                <Footer />
             </div>
-         </BrowserRouter> */}
-         {/* <MyNavbar /> */}
-         {/* <Home /> */}
-         {/* <Footer /> */}
+         </BrowserRouter>
+         
          {/* <CustomNavabar /> */}
-         <Homepage />
+         {/* <Homepage /> */}
       </>
    );
 }
