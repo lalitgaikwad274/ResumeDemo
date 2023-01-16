@@ -82,13 +82,8 @@ const WorkExp = ({
                            placeholder="Write your Experience Here"
                            value={expdesc[index]}
                            onChange={(e) => {
-                              console.log("object",expdesc);
-                              const pointdata = [expdesc, expdesc[index] = e.target.value]
-                              //  expdesc.map((ele, ind) => {
-                              //    console.log(ind, " ",e.target.value);
-                              //    return index === ind ? e.target.value : ele;
-                              // });
-                              // console.log(pointdata);
+                             const pointdata = [...expdesc, expdesc[index] = e.target.value]
+                             
                               setData({
                                  ...data,
                                  expdesc: pointdata
@@ -101,7 +96,8 @@ const WorkExp = ({
                </ul>
                <button
                   onClick={() => {
-                     setData({ ...data, expdesc: expdesc.push("") });
+                     expdesc.push("");
+                     setData({ ...data, expdesc: expdesc });
                   }}
                >
                   Add point
