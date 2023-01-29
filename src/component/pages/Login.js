@@ -21,21 +21,21 @@ const Login = () => {
                         <p className="lead fw-normal mb-0 me-3">Sign in with</p>
                         <button
                            type="button"
-                           className="btn btn-primary btn-floating mx-1"
+                           className="btn btn-primary btn-floating mx-1 px-3"
                            style={{ width: 20 }}
                         >
                            <BsGoogle />
                         </button>
                         <button
                            type="button"
-                           className="btn btn-primary btn-floating mx-1"
+                           className="btn btn-primary btn-floating mx-1 px-3"
                            style={{ width: 20 }}
                         >
                            <ImFacebook />
                         </button>
                         <button
                            type="button"
-                           className="btn btn-primary btn-floating mx-1"
+                           className="btn btn-primary btn-floating mx-1 px-3"
                            style={{
                               width: 20,
                               alignItems: "center",
