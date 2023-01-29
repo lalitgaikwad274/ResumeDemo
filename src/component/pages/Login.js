@@ -19,33 +19,27 @@ const Login = () => {
                   <form>
                      <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                         <p className="lead fw-normal mb-0 me-3">Sign in with</p>
-                        <button
-                           type="button"
-                           className="btn btn-primary btn-floating mx-1"
-                           style={{ width: 20 }}
+                           <button 
+                              type="button"
+                              className="btn btn-primary btn-floating mx-1 px-3"  
                         >
                            <BsGoogle />
                         </button>
                         <button
                            type="button"
-                           className="btn btn-primary btn-floating mx-1"
-                           style={{ width: 20 }}
+                           className="btn btn-primary btn-floating mx-1 px-3"
                         >
                            <ImFacebook />
                         </button>
                         <button
                            type="button"
-                           className="btn btn-primary btn-floating mx-1"
-                           style={{
-                              width: 20,
-                              alignItems: "center",
-                              justifyContent: "center",
-                           }}
+                           className="btn btn-primary btn-floating px-3"
+                          
                         >
                            <FaLinkedinIn />
                         </button>
                      </div>
-                     <div className="divider d-flex align-items-center my-4">
+                     <div className="divider d-flex align-items-center my-2">
                         <p className="text-center fw-bold mx-3 mb-0">Or</p>
                      </div>
                      {/* Email input */}
